@@ -8,7 +8,7 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '.')));
+// app.use(express.static(path.join(__dirname, '.'))); // Removido - frontend está no Netlify
 
 // Database setup
 const db = new sqlite3.Database('./jejezin.db', (err) => {
